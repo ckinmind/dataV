@@ -48,6 +48,13 @@ class Item1 extends React.Component {
 
               <h1> D3制作GitHub 贡献表</h1>
               <div id="chart2"></div>
+
+              <h1> SVG实现圆和三角形</h1>
+              <svg width="200" height="200" id="chart3">
+                  <circle fill="#3E5693" cx="50" cy="120" r="20" />
+                  <text x="100" y="100">Hello SVG!</text>
+                  <path d="M100,10L150,70L50,70Z" fill="#BEDBC3" stroke="#539E91" strokeWidth="3" />
+              </svg>
           </div>
         );
     }
