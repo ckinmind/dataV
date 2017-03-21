@@ -12,7 +12,21 @@
     margin-right: 3px;
 }
 
-
 #chart3 {
     border: 1px solid #000;
 }
+
+#chart4 {
+    circle {
+        fill: #4A988A;
+    }
+    text {
+        font-family: "Open Sans";
+        text-anchor: middle;
+        color: rgb(34,34,34);
+        font-size: 12px;
+    }
+}
+
+
+
