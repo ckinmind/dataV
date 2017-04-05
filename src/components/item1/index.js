@@ -33,14 +33,14 @@ class Item1 extends React.Component {
 
 export default Item1;
 
+/**
 
-/*
+ d3.select()：是选择所有指定元素的第一个
+ d3.selectAll()：是选择指定元素的全部
+ data()：绑定一个数组到选择集上，数组的各项值分别与选择集的各元素绑定
+ enter: 返回输入（enter）选择：当前选择中存在但是当前DOM元素中还不存在的每个数据元素的占位符节点
+ append()：在选择集末尾插入元素
+ style:如果value参数被指定，通过指定名称和指定的值为所有选中的元素设置CSS样式属性
 
- <h1> SVG制作圆和三角形</h1>
- <svg width="200" height="200" id="item1-chart2">
- <circle fill="#3E5693" cx="50" cy="120" r="20" />
- <text x="100" y="100">Hello SVG!</text>
- <path d="M100,10L150,70L50,70Z" fill="#BEDBC3" stroke="#539E91" strokeWidth="3" />
- </svg>
+ */
 
-*/
