@@ -1,32 +1,20 @@
-#chart1 div {
-    display: inline-block;
-    background: #4285F4;
-    width: 20px;
-    margin-right: 3px;
-}
 
-#chart2 div {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 3px;
-}
+.item1 {
 
-#chart3 {
-    border: 1px solid #000;
-}
-
-#chart4 {
-    circle {
-        fill: #4A988A;
+    #item1-chart1 div {
+        display: inline-block;
+        background: #4285F4;
+        width: 20px;
+        margin-right: 3px;
     }
-    text {
-        font-family: "Open Sans";
-        text-anchor: middle;
-        color: rgb(34,34,34);
-        font-size: 12px;
-    }
-}
 
+
+    #item1-chart2 {
+        border: 1px solid #000;
+    }
+
+
+
+}
 
 
