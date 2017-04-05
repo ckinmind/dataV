@@ -58,7 +58,7 @@ class Item5 extends React.Component {
     render() {
         return (
           <div className="item5" >
-              <h1> day 1 </h1>
+              <h1> 画圆 </h1>
               <svg id="item5-chart" style={{width:'400px', height:'400px'}}>day1</svg>
           </div>
         );
@@ -66,3 +66,17 @@ class Item5 extends React.Component {
 }
 
 export default Item5;
+
+/**
+ d3.extent - 返回给定数组（array）自然排序的最小值和最大值，等同于同时调用d3.min和d3.max
+ d3.scale.linear - 构建一个线性比例尺
+
+ domain() 和 range() 分别设定比例尺的定义域和值域
+
+ identity.domain - 取得或设置比例尺的定义域
+ identity.range - 等价于identity.domain
+
+
+ rect元素是SVG的一个基本形状，用来创建矩形，基于一个角位置以及它的宽和高。它还可以用来创建圆角矩形
+
+*/

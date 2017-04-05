@@ -38,3 +38,12 @@ class Item2 extends React.Component {
 }
 
 export default Item2;
+
+/**
+
+ d3.interpolateRg: 返回一个a和b两种颜色值之间的RGB颜色空间插值器。
+ 颜色a和b不需要在RGB里，但他们将通过d3.rgb转换为RGB值。
+ 红、绿、蓝通道是线性地插入值，在某种程度上相当于interpolateRound，即小数部分的通道值是不允许返回的。
+ 插值器的返回值是一个十六进制RGB字符串
+
+ */

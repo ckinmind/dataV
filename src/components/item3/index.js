@@ -31,7 +31,7 @@ class Item3 extends React.Component {
           .attr('cy', 40)
           .attr('cx', (d, i)=> (i+1) * 50)
           .attr('r', (d)=> d.sales);
-        //.attr('fill','#4A988A');
+          //.attr('fill','#4A988A');
 
         g.append("text")
           .attr('y', 90)
@@ -49,10 +49,17 @@ class Item3 extends React.Component {
         return (
           <div className="item3">
               <h1> D3 画一组圆</h1>
-              <svg id="item3-chart" width="250" height="100"></svg>
+              <svg id="item3-chart" width="250" height="100">画圆</svg>
           </div>
         );
     }
 }
 
 export default Item3;
+
+/**
+
+ 元素g是用来组合对象的容器。添加到g元素上的变换会应用到其所有的子元素上。
+ 添加到g元素的属性会被其所有的子元素继承。此外，g元素也可以用来定义复杂的对象，之后可以通过元素来引用它们
+
+*/

@@ -9,6 +9,7 @@ import Item2 from './components/item2';
 import Item3 from './components/item3';
 import Item4 from './components/item4';
 import Item5 from './components/item5';
+import Item6 from './components/item6';
 
 
 const App = ({ children }) => (
@@ -30,6 +31,7 @@ export default () => (
           <Route path="item3" component={Item3} />
           <Route path="item4" component={Item4} />
           <Route path="item5" component={Item5} />
+          <Route path="item6" component={Item6} />
       </Route>
   </Router>
 );
