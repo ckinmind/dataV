@@ -16,7 +16,7 @@ function CodeBlock(props) {
 }
 
 const Markdown = ({source}) =>(
-  <div style={{marginTop:'150px'}}>
+  <div style={{marginTop:'50px'}}>
       <ReactMarkdown source={source} renderers={{CodeBlock: CodeBlock}} />
   </div>
 

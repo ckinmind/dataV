@@ -84,7 +84,7 @@ class Lesson4 extends React.Component {
               return linear(d);   //在这里用比例尺
           })
           .attr("height",rectHeight-2)
-          .attr("fill","steelblue");
+          .attr("fill","#4caf50");
 
 
     }
