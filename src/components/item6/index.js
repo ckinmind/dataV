@@ -6,7 +6,6 @@ class Item6 extends React.Component {
 
 
 
-    /** day1 */
     drawChart(){
         let width = 300;	//画布的宽度
         let height = 300;	//画布的高度

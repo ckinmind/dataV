@@ -39,6 +39,7 @@
     "file-loader": "^0.9.0",
     "glob": "^7.0.0",
     "isparta-instrumenter-loader": "^1.0.0",
+    "json-loader": "^0.5.4",
     "karma": "^1.0.0",
     "karma-chai": "^0.1.0",
     "karma-coverage": "^1.0.0",
@@ -71,6 +72,7 @@
     "prismjs": "^1.6.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
+    "react-markdown": "^2.4.6",
     "react-router": "^3.0.2"
   }
 }
