@@ -24,7 +24,7 @@ let info = `
 class Lesson1 extends React.Component {
 
     drawChart(){
-        let p = d3.select("#les1")
+        d3.select("#les1")
           .selectAll("p")
           .text("Hello D3")
           .style("color", "#4caf50")  //修改段落的颜色和字体大小
