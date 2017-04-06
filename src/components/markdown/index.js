@@ -10,16 +10,16 @@ function CodeBlock(props) {
 
     return (
       <pre className={cls}>
-      <code
-        dangerouslySetInnerHTML={{__html: html}}
-        className={cls}
-      />
-    </pre>
+          <code dangerouslySetInnerHTML={{__html: html}} className={cls}/>
+      </pre>
     )
 }
 
 const Markdown = ({source}) =>(
-    <ReactMarkdown source={source} renderers={{CodeBlock: CodeBlock}} />
+  <div style={{marginTop:'200px'}}>
+      <ReactMarkdown source={source} renderers={{CodeBlock: CodeBlock}} />
+  </div>
+
 );
 
 export default Markdown;
