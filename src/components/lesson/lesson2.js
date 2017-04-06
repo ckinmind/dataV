@@ -82,7 +82,7 @@ class Lesson2 extends React.Component {
     render() {
         return (
           <div>
-              <h1> Lesson 2: 选择元素和绑定数据</h1>
+              <h1> Lesson 2: 选择元素和绑定数据 / 选择、插入、删除元素</h1>
               <div id="les2">
                   <p>Apple</p>
                   <p>Pear</p>

@@ -6,6 +6,7 @@ import Aside from './components/aside';
 
 import Lesson1 from './components/lesson/lesson1';
 import Lesson2 from './components/lesson/lesson2';
+import Lesson3 from './components/lesson/lesson3';
 
 
 import Item1 from './components/item1';
@@ -35,6 +36,7 @@ export default () => (
 
           <Route path="lesson1" component={Lesson1} />
           <Route path="lesson2" component={Lesson2} />
+          <Route path="lesson3" component={Lesson3} />
 
           <Route path="item1" component={Item1} />
           <Route path="item2" component={Item2} />
