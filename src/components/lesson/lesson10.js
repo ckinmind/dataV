@@ -18,7 +18,7 @@ let rects = svg.selectAll(".MyRect")
   .attr("height", (d) => height - padding.top - padding.bottom - yScale(d))
   .attr("fill","steelblue")		//填充颜色不要写在CSS里
   .on("mouseover",(d,i) => {
-       d3.select(\`rect:nth-child(\${i})\`).attr("fill","yellow")
+       d3.select(\`rect:nth-child(\${i+1})\`).attr("fill","yellow")
        //d3.select(d3.event.target).attr("fill","yellow")
   })
   .on("mouseout",function(d,i){
@@ -97,8 +97,8 @@ class Lesson10 extends React.Component {
           .attr("width", xScale.rangeBand() - rectPadding)
           .attr("height", (d) => height - padding.top - padding.bottom - yScale(d))
           .attr("fill","steelblue")		//填充颜色不要写在CSS里
-          .on("mouseover",(d,i,j) => {
-              d3.select(`rect:nth-child(${i})`).attr("fill","yellow")
+          .on("mouseover",(d,i) => {
+              d3.select(`rect:nth-child(${i+1})`).attr("fill","yellow");
              //d3.select(d3.event.target).attr("fill","yellow")
           })
           .on("mouseout",function(d,i){
