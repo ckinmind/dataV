@@ -7,14 +7,36 @@ import './les8.scss'
 let info = `
 
 \`\`\`js
-  
+//添加矩形元素样式
+svg.selectAll(".MyRect")
+.data(dataset)
+.enter()
+.append("rect")
+.attr("class","MyRect")
+.attr("transform",\`translate(\${padding.left},\${padding.top})\`)
+.attr("x", (d,i) => xScale(i) + rectPadding/2)
+.attr("y", d => {
+  let min = yScale.domain()[0]; 
+  // yScale.domain()返回的是高度的取值区间，为[0, 40]
+  return yScale(min);  
+  // 这里其实获取的都是最低高度对应的距离顶部的值（最高），值都为40
+})
+.attr("width", xScale.rangeBand() - rectPadding )
+.attr("height", d => 0)
+.transition()                  /* 添加动画效果*/
+.delay((d,i) => i * 200)
+.duration(2000)
+.ease("bounce")
+.attr("y", d => yScale(d))
+.attr("height", (d) => height - padding.top - padding.bottom - yScale(d));
 \`\`\`
 
 \`\`\`js
-
+1. yScale的domain范围是[0, 40],range范围是[height - padding.top - padding.bottom, 0]
+因为这里的y是指距离顶部的距离，所以dataset中越大的，y反而越小
 \`\`\`
 
-
+2. 文字也有动画，才能使得文字和矩形同步
 `;
 
 
@@ -70,12 +92,11 @@ class Lesson8 extends React.Component {
           .enter()
           .append("rect")
           .attr("class","MyRect")
-          .attr("transform","translate(" + padding.left + "," + padding.top + ")")
+          .attr("transform",`translate(${padding.left},${padding.top})`)
           .attr("x", (d,i) => xScale(i) + rectPadding/2)
           .attr("y", d => {
-              let min = yScale.domain()[0];
-              console.log('min: ' + min);
-              return yScale(min);
+              let min = yScale.domain()[0];  // yScale.domain()返回的是高度的取值区间，为[0, 40]
+              return yScale(min);            // 这里其实获取的都是最低高度对应的距离顶部的值（最高），值都为40
           })
           .attr("width", xScale.rangeBand() - rectPadding )
           .attr("height", d => 0)
