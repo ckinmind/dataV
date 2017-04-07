@@ -17,8 +17,9 @@ let rects = svg.selectAll(".MyRect")
   .attr("width", xScale.rangeBand() - rectPadding)
   .attr("height", (d) => height - padding.top - padding.bottom - yScale(d))
   .attr("fill","steelblue")		//填充颜色不要写在CSS里
-  .on("mouseover",function(d,i){
-      d3.select(this).attr("fill","yellow");
+  .on("mouseover",(d,i) => {
+       d3.select(\`rect:nth-child(\${i})\`).attr("fill","yellow")
+       //d3.select(d3.event.target).attr("fill","yellow")
   })
   .on("mouseout",function(d,i){
       d3.select(this)
@@ -34,6 +35,8 @@ let rects = svg.selectAll(".MyRect")
 2. 当某个事件被监听到时，D3 会把当前的事件存到 d3.event 对象，里面保存了当前事件的各种参数
 
 3. 监听器函数中都使用了 d3.select(this)，表示选择当前的元素，this 是当前的元素，要改变响应事件的元素时这么写就好
+
+4. 注意箭头函数在d3中使用遇到的关于this的问题，issue #8提供了几种解决方案
 \`\`\`
 
 
@@ -94,8 +97,9 @@ class Lesson10 extends React.Component {
           .attr("width", xScale.rangeBand() - rectPadding)
           .attr("height", (d) => height - padding.top - padding.bottom - yScale(d))
           .attr("fill","steelblue")		//填充颜色不要写在CSS里
-          .on("mouseover",function(d,i){
-              d3.select(this).attr("fill","yellow");
+          .on("mouseover",(d,i,j) => {
+              d3.select(`rect:nth-child(${i})`).attr("fill","yellow")
+             //d3.select(d3.event.target).attr("fill","yellow")
           })
           .on("mouseout",function(d,i){
               d3.select(this)
