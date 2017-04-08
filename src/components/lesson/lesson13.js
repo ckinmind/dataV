@@ -202,7 +202,7 @@ class Lesson13 extends React.Component {
     render() {
         return (
           <div>
-              <h1> Lesson 13: 向图的制作</h1>
+              <h1> Lesson 13: 力导向图的制作</h1>
               <div id="les13">
               </div>
               <Markdown source={info} />
