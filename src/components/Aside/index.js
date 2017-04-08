@@ -21,6 +21,7 @@ class Aside extends React.Component {
                   <Link to="/lesson12"  activeClassName="active">Lesson 12</Link>
                   <Link to="/lesson13"  activeClassName="active">Lesson 13</Link>
                   <Link to="/lesson14"  activeClassName="active">Lesson 14</Link>
+                  <Link to="/lesson15"  activeClassName="active">Lesson 15</Link>
 
 
                   <Link to="/item1"  activeClassName="active">Item1</Link>
