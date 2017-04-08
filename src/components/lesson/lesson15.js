@@ -31,7 +31,6 @@ let links = cluster.links(nodes); // 转换后的连接线数据（links）
 5. text-anchor(svg中的属性): 文本锚点属性被用来描述该文本与所给点的对齐方式 (开头、中间、末尾对齐)
 
 6. dx/dy : 表示一个元素或其内容在x/y轴方向上的偏移，偏移量取决于设置该属性的元素
-
 \`\`\`
 
 
@@ -55,7 +54,15 @@ let city =
           {
               "name": "广西",
               "children": [
-                  {"name": "桂林"},
+                  {
+                      "name": "桂林",
+                      "children": [
+                          {"name":"秀峰区"},
+                          {"name":"叠彩区"},
+                          {"name":"象山区"},
+                          {"name":"七星区"}
+                      ]
+                  },
                   {"name": "南宁"},
                   {"name": "柳州"},
                   {"name": "防城港"}
@@ -87,6 +94,7 @@ let city =
 
 
 
+
 class Lesson15 extends React.Component {
 
     drawChart() {
@@ -99,7 +107,7 @@ class Lesson15 extends React.Component {
           .attr("transform", "translate(40,0)");
 
         //定义一个集群图布局
-        let cluster = d3.layout.cluster().size([width, height - 200]);
+        let cluster = d3.layout.cluster().size([width, height - 100]);
 
 
         // d3.svg.diagonal() 。这是一个对角线生成器，只需要输入两个顶点坐标，即可生成一条贝塞尔曲线

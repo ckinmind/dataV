@@ -19,6 +19,7 @@ import Lesson12 from './components/lesson/lesson12';
 import Lesson13 from './components/lesson/lesson13';
 import Lesson14 from './components/lesson/lesson14';
 import Lesson15 from './components/lesson/lesson15';
+import Lesson16 from './components/lesson/lesson16';
 
 
 import Item1 from './components/item1';
@@ -61,6 +62,7 @@ export default () => (
           <Route path="lesson13" component={Lesson13} />
           <Route path="lesson14" component={Lesson14} />
           <Route path="lesson15" component={Lesson15} />
+          <Route path="lesson16" component={Lesson16} />
 
           <Route path="item1" component={Item1} />
           <Route path="item2" component={Item2} />
