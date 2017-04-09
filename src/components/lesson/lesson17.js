@@ -234,7 +234,7 @@ class Lesson17 extends React.Component {
     render() {
         return (
           <div>
-              <h1> Lesson </h1>
+              <h1> Lesson 17: 打包图的制作</h1>
               <div id="les17">
               </div>
               <Markdown source={info}/>
