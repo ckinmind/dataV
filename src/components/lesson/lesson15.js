@@ -126,7 +126,18 @@ class Lesson15 extends React.Component {
           .enter()
           .append("path")
           .attr("class", "link")
-          .attr("d", diagonal);   //svg中d属性定义了一个路径
+          .attr("d", diagonal)   //svg中d属性定义了一个路径
+           .on('mouseover', function(d,i,j){
+
+               //d3.select(`#les15 .link:nth-child(${i+1})`).attr("class", "link2");
+               //d3.select(d3.select(this)).attr("class", "link2");
+
+           }).on('mouseout', function(d,i,j){
+
+             //  d3.select(`#les15 .link:nth-child(${i+1})`).classed({"link2":false});
+              //d3.select(d3.select(this)).attr("class", "link2");
+
+          });
 
         let node = svg.selectAll(".node")
           .data(nodes)
@@ -136,13 +147,49 @@ class Lesson15 extends React.Component {
           .attr("transform", d => `translate(${d.y}, ${d.x})`);
 
         // 定义节点圆的半径
-        node.append("circle").attr("r", 4.5);
+        node.append("circle")
+          .attr("r", 4.5)
+          .style("fill", d =>  d.children ? "lightsteelblue" : "#fff");
 
         node.append("text")
           .attr("dx", d => d.children ? -8 : 8)  // dx属性表示一个元素或其内容在x轴方向上的偏移，偏移量取决于设置该属性的元素
           .attr("dy", 3)
           .style("text-anchor", d => d.children ? "end" : "start") // text-anchor: 文本锚点属性被用来描述该文本与所给点的对齐方式 (开头、中间、末尾对齐)
+          .attr('font-size','12px')
           .text(d => d.name);
+
+        node.selectAll('text')
+          .on('mouseover', function(d,i,j){
+
+              // console.log(d);
+              // console.log('i: '+i);
+              // console.log(j);
+              // console.log(links);
+              // console.log(nodes);
+              // console.log(d3.event.target);
+              // console.log(d3.select(this));
+
+
+              d3.select(d3.event.target)
+                .transition()
+                .duration(1000)
+                .ease("bounce")
+                .attr('font-size','18px');
+
+             // d3.select('#les15 .link:nth-child(2)').attr("class", "link2");
+             // d3.selectAll(`#les15 .link:nth-child(${j})`).attr("class", "link2");
+              //d3.select(nodes[0]).attr("class", "link2");
+
+
+          })
+          .on('mouseout', (d,i) => {
+              //link.filter( a => a.source == d).attr('stroke', 'orange');
+              d3.select(d3.event.target)
+                .transition()
+                .duration(1000)
+                .ease("bounce")
+                .attr('font-size','12px');
+          });
     }
 
 

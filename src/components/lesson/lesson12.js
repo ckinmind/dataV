@@ -6,11 +6,44 @@ import Markdown from '../markdown'
 let info = `
 
 \`\`\`js
-  
+  let arcs = svg.selectAll("g")
+      .data(piedata)
+      .enter()
+      .append("g")
+      .each(d => {
+          let padding = 0.009;    // 增加扇形间的空隙
+          d.startAngle += padding;
+          d.endAngle -= padding;
+      })
+      .attr("transform",\`translate(\${(width/2)}, \${(width/2)})\`);
+    
+    arcs.append("path")
+      .attr("fill",(d,i) => color(i))
+      .attr("d", d => arc(d))        //调用弧生成器，得到路径值
+      .on("mouseover",function(d,i){
+          d3.select(this)
+            .transition()
+            .duration(1000)
+            .delay(100)
+            .ease("bounce")
+            .attr("transform",(d) => \`scale(1.2,1.2)\`);
+      })
+      .on("mouseout",function(d,i){
+          d3.select(this)
+            .transition()
+            .duration(1000)
+            .attr("transform", d =>\`scale(1,1)\`); //centroid返回的是弧形的重心与弧心的相对位置
+      });
 \`\`\`
 
 \`\`\`js
+1. 计算出适合于作图的数据, 这个过程称之为数据转换
 
+2. 布局不是要直接绘图，而是为了得到绘图所需的数据
+
+3. 弧生成器，能够生成弧的路径，因为饼图的每一部分都是一段弧
+
+4. color 是一个颜色比例尺，它能根据传入的索引号获取相应的颜色值
 \`\`\`
 
 

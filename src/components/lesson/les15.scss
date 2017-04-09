@@ -1,5 +1,6 @@
 #les15 {
     .node circle {
+        cursor: pointer;
         fill: #fff;
         stroke: steelblue;
         stroke-width: 1.5px;
@@ -13,5 +14,11 @@
         fill: none;
         stroke: #ccc;
         stroke-width: 1.5px;
+    }
+
+    .link2 {
+        fill: none;
+        stroke: red;
+        stroke-width: 3.5px;
     }
 }
