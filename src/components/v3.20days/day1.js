@@ -49,7 +49,7 @@ class Day extends React.Component {
 
         const svg = d3.select("#day1")
                           .append("svg")				//添加一个svg元素
-                          .attr("width", '400px')		    //设定宽度
+                          .attr("width", '400px')		//设定宽度
                           .attr("height", '400px');	    //设定高度
 
         svg.selectAll('rect')
