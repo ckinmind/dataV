@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Router, hashHistory, IndexRoute} from 'react-router';
 
 
-import Aside from './components/aside/v3.aside';
+import Aside from './components/aside/aside-v3-lesson';
 
 import Main from './components/v3.lesson/lesson';
 import Lesson1  from './components/v3.lesson/lesson1';

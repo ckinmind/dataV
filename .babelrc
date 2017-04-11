@@ -5,6 +5,7 @@
     "react"
   ],
   "ignore": [
-    "./src/components/v3.lesson/d3.js"
+    "./src/components/v3.lesson/d3.js",
+    "./src/components/v3.20days/d3.js"
   ]
 }
