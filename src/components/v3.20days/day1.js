@@ -29,10 +29,12 @@ const data = [
 
 let info = `
 
-\`\`\`js      
+\`\`\`js
+
 \`\`\`
 
 \`\`\`js
+
 \`\`\`
 
 
@@ -45,7 +47,12 @@ class Day extends React.Component {
         const valueRange = d3.extent(data, d => d.value);
         const colorScale = d3.scale.linear().domain(valueRange).range([5, 100]);
 
-        d3.select('#day1').selectAll('rect')
+        const svg = d3.select("#day1")
+                          .append("svg")				//添加一个svg元素
+                          .attr("width", '400px')		    //设定宽度
+                          .attr("height", '400px');	    //设定高度
+
+        svg.selectAll('rect')
           .data(data)
           .enter()
           .append('circle')
@@ -55,7 +62,7 @@ class Day extends React.Component {
               r: d => colorScale(d.value),
               fill: '#D0021B',
               opacity: 0.5,
-          })
+          });
     }
 
 
