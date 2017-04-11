@@ -1,9 +1,10 @@
 import React from 'react';
 import { Route, Router, hashHistory, IndexRoute} from 'react-router';
 
-import Main from './components/Main';
+
 import Aside from './components/aside/v3.aside';
 
+import Main from './components/v3.lesson/lesson';
 import Lesson1  from './components/v3.lesson/lesson1';
 import Lesson2  from './components/v3.lesson/lesson2';
 import Lesson3  from './components/v3.lesson/lesson3';
@@ -38,8 +39,7 @@ const App = ({ children }) => (
 export default () => (
   <Router history={hashHistory}>
       <Route path="/" component={App}>
-          <IndexRoute component={Main}/>
-
+          <Route path="v3/lesson" component={Main}/>
           <Route path="v3/lesson1" component={Lesson1} />
           <Route path="v3/lesson2" component={Lesson2} />
           <Route path="v3/lesson3" component={Lesson3} />
