@@ -1,5 +1,5 @@
 import React from 'react'
-import d3 from 'd3'
+import d3 from './d3'
 import Markdown from '../markdown'
 import './les5.scss'
 

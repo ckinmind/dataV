@@ -3,5 +3,8 @@
     "es2015",
     "stage-0",
     "react"
+  ],
+  "ignore": [
+    "./src/components/v3.lesson/d3.js"
   ]
 }
