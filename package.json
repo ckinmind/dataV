@@ -67,6 +67,7 @@
     "classnames": "^2.2.5",
     "core-js": "^2.0.0",
     "d3": "^4.7.4",
+    "d3-selection-multi": "^1.0.1",
     "lodash": "^4.17.4",
     "normalize.css": "^4.0.0",
     "prismjs": "^1.6.0",

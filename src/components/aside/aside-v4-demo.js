@@ -7,9 +7,8 @@ class Aside extends React.Component {
         return (
           <aside className="app-sidebar">
               <nav>
-                  <Link to="/v3/day"  activeClassName="active">说明</Link>
-                  <Link to="/v3/day1"  activeClassName="active">V3 Day 1</Link>
-                  <Link to="/v4/day1"  activeClassName="active">V4 Day 1</Link>
+                  <Link to="/v4/demo"  activeClassName="active">说明</Link>
+                  <Link to="/v4/demo1"  activeClassName="active">Demo 1</Link>
               </nav>
           </aside>
         )
