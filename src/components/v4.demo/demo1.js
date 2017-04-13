@@ -6,11 +6,11 @@ import './demo1.scss'
 let info = `
 
 \`\`\`js
-
+1. 
 \`\`\`
 
 \`\`\`js
-
+1. 更改
 \`\`\`
 
 
