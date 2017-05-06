@@ -6,11 +6,28 @@ import './demo1.scss'
 let info = `
 
 \`\`\`js
-1. 
+//v4中定义y轴
+let yAxis = d3.axisLeft(yAxisScale)
+  .tickSizeInner(-dimensions.gInnerWidth)
+  .tickPadding(10);
+  
 \`\`\`
 
 \`\`\`js
-1. 更改
+//v3中定义y轴
+let yAxis = d3.svg.axis()
+    .scale(yScale)
+    .orient("left");
+\`\`\`
+
+\`\`\`js
+1. d3.axisLeft(scale): 根据指定的 scale构造一个left-axis, tick 参数为空, tick 大小为 6 并且 padding为 3. 轴在垂直方向绘制
+
+2. axis.tickSizeInner([size]):如果指定了 size 则设置内侧的刻度尺寸并返回axis. 
+如果没有指定 size 则返回当前的内侧刻度尺寸大小,默认为6(Y轴上刻度线的长度)
+                              
+                    
+3. axis.tickPadding([padding]):  padding为刻度和刻度值之间的间距
 \`\`\`
 
 
@@ -73,7 +90,7 @@ class Demo1 extends React.Component {
         // This is to make the horizontal tick lines stretch all the way across the chart
           .tickSizeInner(-dimensions.gInnerWidth)
           // This spaces the tick values slights from the axis
-          .tickPadding(10);
+          .tickPadding(10); // 这里写不写都可以
 
         chart.append('g')
           .attrs({
@@ -132,7 +149,7 @@ class Demo1 extends React.Component {
               <div id="demo1">
 
               </div>
-              {/*<Markdown source={info} />*/}
+              <Markdown source={info} />
           </div>
         );
     }

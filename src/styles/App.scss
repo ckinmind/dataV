@@ -3,6 +3,10 @@
         height: 100%;
     }
 
+    h1 {
+        text-align: center;
+    }
+
     .app-wrap {
         height: 100vh;
         display: flex;
@@ -15,7 +19,7 @@
     }
 
     .app-content {
-        flex: 3;
+        flex: 5;
         position: relative;
     }
 
@@ -28,7 +32,7 @@
 
         nav {
             font-family: 'Unica One', sans-serif;
-            text-transform: uppercase;
+            //text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 2rem;
 

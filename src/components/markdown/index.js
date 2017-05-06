@@ -15,8 +15,8 @@ function CodeBlock(props) {
     )
 }
 
-const Markdown = ({source}) =>(
-  <div style={{marginTop:'50px'}}>
+const Markdown = ({source, show = true}) =>(
+  <div style={{marginTop:'50px', display: show ? 'block' : 'none'}}>
       <ReactMarkdown source={source} renderers={{CodeBlock: CodeBlock}} />
   </div>
 

@@ -7,5 +7,6 @@
   "ignore": [
     "./src/components/v3.lesson/d3.js",
     "./src/components/20days/d3.js"
-  ]
+  ],
+  "plugins": ["transform-decorators-legacy"]
 }

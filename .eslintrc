@@ -20,11 +20,11 @@
   "rules": {
     "comma-dangle": 0,
     "quotes": [ 0, "single" ],
-    "no-undef": 1,
+    "no-undef": 0,
     "global-strict": 0,
     "no-extra-semi": 1,
     "no-underscore-dangle": 0,
-    "no-console": 1,
+    "no-console": 0,
     "no-unused-vars": 0,
     "no-trailing-spaces": [1, { "skipBlankLines": true }],
     "no-unreachable": 1,
